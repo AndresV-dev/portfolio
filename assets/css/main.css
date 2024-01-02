@@ -22,8 +22,7 @@ img {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: var(--primary-color);
-    color: var(--font-color);
+    background-color: #18181B;
 }
 
 .image-logo {
@@ -31,22 +30,75 @@ body {
     height: 80px;
     object-fit: cover;
 }
-.principal-container {
-    display: grid !important;
-    grid-template-areas: 'header' 'main' 'footer';
-    gap: 10px;
-    padding: 10px;
+
+
+header {
+    position: relative;
+    padding-top: 2rem;
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
 }
 
-.header-container {
-    grid-area: header;
+header .content h1 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
 }
-.main-container {
-    grid-area: main;
+
+header .content h1 span {
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
 }
-.footer-container {
-    grid-area: footer;
+
+header .content p {
+    margin-bottom: 2rem;
+    color: #ccc
 }
+
+header .image {
+    position: relative;
+}
+header .image::before {
+    content: "o";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 38rem;
+    font-weight: 400;
+    line-height: 20rem;
+    color: #1d4ed8;
+    opacity: 0.2;
+    z-index: -100;
+}
+
+header .image img {
+    max-width: 600px;
+    margin: auto;
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur-right {
+    position: absolute;
+    box-shadow: revert;
+    box-shadow: 0 0 1000px 50px #0fb0d5;
+    z-index: -100;
+}
+.blur-left {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #1d4ed8;
+    z-index: -100;
+}
+
 
 .menu {
     list-style: none;
@@ -80,10 +132,6 @@ body {
     font-weight: bold;
     font-size: 24px;
 }
-
-.image-profile {
-    width: 150px;
-}
 /*
 nav {
     max-width: 100%;
@@ -116,10 +164,6 @@ nav {
     text-align: justify;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-}
 .profileImage {
     text-align: center;
     padding: 30px;
