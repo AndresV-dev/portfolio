@@ -14,6 +14,7 @@
 }
 a {
     text-decoration: none;
+    width: fit-content;
 }
 img {
     width: 100%;
@@ -62,19 +63,7 @@ header .content p {
 header .image {
     position: relative;
 }
-header .image::before {
-    content: "o";
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 38rem;
-    font-weight: 400;
-    line-height: 20rem;
-    color: #1d4ed8;
-    opacity: 0.2;
-    z-index: -100;
-}
+
 
 header .image img {
     max-width: 600px;
@@ -87,18 +76,195 @@ header .image img {
     padding: 5rem 2rem;
 }
 
-.blur-right {
+.blur-ligthblue {
     position: absolute;
-    box-shadow: revert;
+    left: 80%;
     box-shadow: 0 0 1000px 50px #0fb0d5;
     z-index: -100;
 }
-.blur-left {
+
+.blur-red {
+    position: absolute;
+    left: 20%;
+    box-shadow: 0 0 1000px 50px #e4501e;
+    z-index: -100;
+}
+
+.blur-blue {
     position: absolute;
     box-shadow: 0 0 1000px 50px #1d4ed8;
     z-index: -100;
 }
+.blur-yellow {
+    position: absolute;
+    left: 50%;
+    box-shadow: 0 0 1000px 50px #e6db07;
+    z-index: -100;
+}
 
+section .header {
+    margin-bottom: 1rem;
+    margin-left: -4rem;
+    color: #fff;
+    text-align: left;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+
+section .text {
+    color: #ccc;
+    margin-top: 1rem;
+}
+
+.proyects {
+    margin-top: 4rem;
+    display: grid ;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.proyects .card {
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.proyects .card:hover {
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.proyects .card span {
+    display: inline-block;
+    background-color: #1e40af;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.proyects .card h3 {
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.proyects .card p{
+    color: #ccc;
+    margin-bottom: 1rem;
+}
+
+.proyects .card a {
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.proyects .card a:hover {
+    color: #1e40af;
+}
+
+.imageCard {
+    height: 170px;
+    align-self: center;
+}
+.imageCard img {
+    width: 100%;
+}
+.descriptionCard {
+    padding: 1rem;
+}
+
+.contact {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+}
+
+Section .links {
+    color: #ccc;
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+}
+
+Section .links i {
+    margin-right: 0.75rem;
+}
+
+section .links a {
+    color: #ccc;
+    font-weight: 700;
+    transition: all 0.3 ease;
+}
+
+section .links a:hover {
+    color: #0fb0d5;
+}
+
+section .contact .form {
+    color: #ccc;
+    background-color: #27272a;
+    padding: 1rem 2rem;
+    width: 35rem;
+    height: 35rem;
+}
+section .contact .form form {
+    border-top: groove #797979 2px;
+    margin: 1rem;
+    padding-top: 1rem;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+}
+
+section .contact .form button {
+    margin-top: 2rem;
+    width: 70%;
+    height: 3rem;
+    border-radius: 4px;
+    background-color: #1d4ed8;
+    color: #ccc;
+    align-self: center;
+}
+
+section .contact .form h1 {
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+section .contact .form .message {
+    font-size: 1rem;
+    text-align: center;
+}
+
+section form input {
+    margin: 1rem 1.5rem;
+    border-radius: 3px;
+    width: 90%;
+    height: 2rem;
+}
+
+footer {
+    max-width: 100%;
+    margin: .75rem auto;
+}
+footer .column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    color: #ccc;
+    align-items: center;
+}
+.footer-class {
+    color: #ccc;
+    width: 100%;
+    text-align: center;
+}
 
 .menu {
     list-style: none;
@@ -128,10 +294,6 @@ header .image img {
     width: 100%;
 }
 
-.tittle {
-    font-weight: bold;
-    font-size: 24px;
-}
 /*
 nav {
     max-width: 100%;
@@ -152,62 +314,70 @@ nav {
     border-bottom: groove #797979;
 }
 
-.main-container {
-    display: grid;
-    grid-template-rows: 'Home' 'Works' 'About' 'Contact';
-    gap: 10px;
-}
-
-.section {
-    border: solid #797979;
-    align-self: center;
-    text-align: justify;
-}
-
 .profileImage {
     text-align: center;
     padding: 30px;
 }
-.presentation {
-    padding: 30px;
+
+@media (width < 900px) {
+    .menu {
+        display: none;
+    }
+    header {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image {
+        grid-area: 1/1/2/2;
+        width: 70%;
+    }
+    header .content {
+        align-items: center;
+    }
+    .proyects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contact {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contact .links {
+        font-size: 1.25rem;
+    }
+    .footer-class {
+        font-size: .75rem;
+    }
 }
-.presentation>h3 {
-    font-size: 20px;
-    padding-left: 50px;
-    text-align: justify;
-}
-.container-works {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 15px;
-    padding: 15px;
-    justify-items: center;
-}
-.card {
-    width: 320px;
-    height: 400px;
-    padding: 10px;
-    border: groove color-mix(in srgb, black 40%, blueviolet);
-}
-.imageCard {
-    height: 170px;
-    align-self: center;
-}
-.imageCard>img {
-    width: 250px;
-    height: 150px;
-}
-.descriptionCard {
-    padding: 10px;
-}
-.buttonCard {
-    text-align: center;
-}
-.buttonCard>button {
-    width: 70px;
-    background-color: blueviolet;
-    color: white;
-    border-radius: 4px;
+
+@media (width < 600px){
+    header .image{
+        justify-self: center;
+    }
+    header .content h1 {
+        font-size: 2.50rem;
+    }
+    header .content p {
+        font-size: 1rem;
+    } 
+    .container {
+        padding: 2rem 2rem;
+    }
+    .container h1 {
+        font-size: 1.75rem;
+    }
+    .container p {
+        font-size: .8rem;
+    }
+    .proyects {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .header {
+        font-size: 1rem;
+    }
+    .contact .links{
+        font-size: .7rem;
+    }
+    section .contact .form {
+        width: 25rem;
+    }
 }
 /* - Investigar como hacer que se subralle el a al cambiar de seccion 
    - Investigar la forma de incluir splach de colores en el body (neon o normales) posibles colores azel morado amarillo */
