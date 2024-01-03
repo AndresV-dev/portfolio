@@ -311,6 +311,7 @@ nav {
     width: 100%;
     padding: 1rem 1rem;
     align-items: left;
+    position: sticky;
     border-bottom: groove #797979;
 }
 
@@ -319,10 +320,49 @@ nav {
     padding: 30px;
 }
 
-@media (width < 900px) {
-    .menu {
-        display: none;
+.subname {
+    display: none;
+}
+.subname {
+    width: 70%;
+    align-self: center;
+    background-color: #18181B;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 7px;
+}
+
+.backHome {
+    position: sticky;
+    width: 2rem;
+    height: 2rem;
+    top: 35%;
+    left: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: solid #0fb0d5;
+    border-radius: 1rem;
+    transition: all 0.3s ease-in;
+}
+.backHome span {
+    color: #fff;
+}
+
+.backHome:hover {
+    background-color: #0fb0d5;
+}
+
+@media (width < 1280px) {
+    .proyects {
+        grid-template-columns: repeat(2, 1fr);
     }
+    .contact .links {
+        font-size: 1.25rem;
+    }
+}
+
+@media (width < 951px) {
     header {
         grid-template-columns: repeat(1, 1fr);
     }
@@ -333,17 +373,26 @@ nav {
     header .content {
         align-items: center;
     }
-    .proyects {
-        grid-template-columns: repeat(2, 1fr);
-    }
     .contact {
         grid-template-columns: repeat(1, 1fr);
     }
-    .contact .links {
-        font-size: 1.25rem;
-    }
     .footer-class {
         font-size: .75rem;
+    }
+    .backHome {
+        left: 90%;
+    }
+}
+
+@media (width < 700px) {
+    .subname {
+        display: block;
+    }
+    .menu {
+        display: none;
+    }
+    .backHome {
+        left: 90%;
     }
 }
 
