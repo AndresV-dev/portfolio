@@ -6,11 +6,15 @@
     outline: none;
     border: none;
     box-sizing: border-box;
-    --primary-color: black;
-    --secundary-color: white;
-    --font-text: arial;
-    --font-color: white;
-    --font-size-navbar: 18px;
+    --primary-color: #18181B;
+    --secundary-color: #27272a;
+    --title-font-color: #fff;
+    --text-font-color: #ccc;
+    --font-size-title: 2.25rem;
+    --font-weight-title: 600;
+    --font-size-text: 18px;
+    --font-size-card-title: 1.5rem;
+    --details-color: #0fb0d5;
 }
 a {
     text-decoration: none;
@@ -23,7 +27,7 @@ img {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #18181B;
+    background-color: var(--primary-color);
 }
 
 .image-logo {
@@ -43,7 +47,7 @@ header {
 }
 
 header .content h1 {
-    color: #fff;
+    color: var(--title-font-color);
     margin-bottom: 1rem;
     font-size: 3rem;
     font-weight: 700;
@@ -57,7 +61,7 @@ header .content h1 span {
 
 header .content p {
     margin-bottom: 2rem;
-    color: #ccc
+    color: var(--text-font-color)
 }
 
 header .image {
@@ -105,15 +109,15 @@ header .image img {
 section .header {
     margin-bottom: 1rem;
     margin-left: -4rem;
-    color: #fff;
+    color: var(--title-font-color);
     text-align: left;
-    font-size: 2.25rem;
-    font-weight: 600;
+    font-size: var(--font-size-title);
+    font-weight: var(--font-weight-title);
 }
 
 
 section .text {
-    color: #ccc;
+    color: var(--text-font-color);
     margin-top: 1rem;
 }
 
@@ -125,47 +129,44 @@ section .text {
 }
 
 .proyects .card {
-    background-color: #27272a;
+    display: grid;
+    grid-template-rows: max-content;
+    align-items: center;
+    align-content: space-between;
+    background-color: var(--secundary-color);
     padding: 1rem;
-    border: 2px solid transparent;
+    border-bottom: 2px solid transparent;
     border-radius: 15px;
     transition: all 0.3s ease;
 }
 
 .proyects .card:hover {
-    background-color: #323232;
-    border-color: #fff;
-}
-
-.proyects .card span {
-    display: inline-block;
-    background-color: #1e40af;
-    padding: 2px 9px;
-    margin-bottom: 1rem;
-    font-size: 1.75rem;
-    color: #fff;
-    border-radius: 5px;
+    background-color: #333333;
+    border-color: var(--details-color);
 }
 
 .proyects .card h3 {
     margin-bottom: 0.5rem;
-    color: #fff;
-    font-size: 1.2rem;
+    color: var(--title-font-color);
+    font-size: var(--font-size-card-title);
     font-weight: 600;
 }
 
 .proyects .card p{
-    color: #ccc;
+    color: var(--text-font-color);
     margin-bottom: 1rem;
 }
 
 .proyects .card a {
-    color: #fff;
+    height: 1.55rem;
+    justify-self: center;
+    color: var(--title-font-color);
     transition: all 0.3s ease;
 }
 
 .proyects .card a:hover {
-    color: #1e40af;
+    border-bottom: 1px solid #0fb0d5;
+    color: var(--details-color);
 }
 
 .imageCard {
@@ -188,7 +189,7 @@ section .text {
 }
 
 Section .links {
-    color: #ccc;
+    color: var(--text-font-color);
     font-size: 1.75rem;
     margin-bottom: 2rem;
 }
@@ -198,18 +199,18 @@ Section .links i {
 }
 
 section .links a {
-    color: #ccc;
+    color: var(--text-font-color);
     font-weight: 700;
     transition: all 0.3 ease;
 }
 
 section .links a:hover {
-    color: #0fb0d5;
+    color: var(--details-color);
 }
 
 section .contact .form {
-    color: #ccc;
-    background-color: #27272a;
+    color: var(--text-font-color);
+    background-color: var(--secundary-color);
     padding: 1rem 2rem;
     width: 35rem;
     height: 35rem;
@@ -228,8 +229,8 @@ section .contact .form button {
     width: 70%;
     height: 3rem;
     border-radius: 4px;
-    background-color: #1d4ed8;
-    color: #ccc;
+    background-color: var(--details-color);
+    color: #000;
     align-self: center;
 }
 
@@ -257,11 +258,11 @@ footer {
 footer .column {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    color: #ccc;
+    color: var(--text-font-color);
     align-items: center;
 }
 .footer-class {
-    color: #ccc;
+    color: var(--text-font-color);
     width: 100%;
     text-align: center;
 }
@@ -276,7 +277,7 @@ footer .column {
 .link a {
     position: relative;
     padding-bottom: 0.5rem;
-    color: #fff;
+    color: var(--title-font-color);
 }
 
 .link a::after {
@@ -286,7 +287,7 @@ footer .column {
     width: 0;
     bottom: 0;
     left: 0;
-    background-color: #1d4ed8;
+    background-color: var(--details-color);
     transition: all 0.3s ease;
 }
 
@@ -326,8 +327,8 @@ nav {
 .subname {
     width: 70%;
     align-self: center;
-    background-color: #18181B;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--title-font-color);
     font-size: 1rem;
     border-radius: 7px;
 }
@@ -346,11 +347,11 @@ nav {
     transition: all 0.3s ease-in;
 }
 .backHome span {
-    color: #fff;
+    color: var(--title-font-color);
 }
 
 .backHome:hover {
-    background-color: #0fb0d5;
+    background-color: var(--details-color);
 }
 
 @media (width < 1280px) {
